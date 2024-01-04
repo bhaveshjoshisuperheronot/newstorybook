@@ -16,7 +16,7 @@ export default {
                     summary: options.colors.map(option => `'${option}'`).join("|")
                 }
             },
-            contol: {
+            control: {
                 type: {
                     summary: options.sizes.map(size => `'${size}'`).join("|")
                 }
