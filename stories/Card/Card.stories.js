@@ -17,9 +17,22 @@ export default {
                 }
             },
             control: {
-                type: {
-                    summary: options.sizes.map(size => `'${size}'`).join("|")
+                type: "select",
+                options: {
+                    summary: options.colors.map(option => `'${option}'`).join("|")
                 }
+            }
+        },
+        size: {
+            description: "**options**",
+            table: {
+                type: {
+                    summary: options.sizes.map(option => `'${option}'`).join("|")
+                }
+            },
+            control: {
+                type: "select",
+                options: options.sizes
             }
         }
     }
