@@ -1,3 +1,5 @@
+import {cssModules} from "../config/cssModules"
+
 /** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
   stories: [
@@ -19,7 +21,8 @@ const config = {
     },
   },
   docs: {
-    autodocs: "tag",
+    autodocs: true,
   },
+  webpackFinal: cssModules,
 };
 export default config;

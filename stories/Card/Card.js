@@ -1,16 +1,16 @@
 import React from 'react'
 import { options } from "./constants";
 import PropTypes from 'prop-types'
-import './Card.css'
+import styles from './Card.module.css'
 
 export const Card = ({
-    children='I am a card',
+    children='',
     color = 'primary',
     size = 'sm',
     isClickable,
     isDraggable,
 }) => {
-    return <div className={`card color-${color} size-${size} ${isClickable? "is-clickable":""} ${isDraggable? "is-draggable":""}`}>{children}</div>
+    return <div className={`${styles.card} ${styles[`color-${color}`]} ${styles[`size-${size}`]} ${isClickable? styles['is-clickable']:""} ${isDraggable? styles['is-draggable']:""}`}>{children}</div>
 }
 
 Card.propTypes = {

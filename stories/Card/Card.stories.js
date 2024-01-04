@@ -4,7 +4,25 @@ import { options } from "./constants";
 
 export default {
     title: 'Card',
-    component: Card
+    component: Card,
+    args: {
+        children: 'I am a card by default in stories'
+    },
+    argTypes: {
+        color: {
+            description: "**options**",
+            table: {
+                type: {
+                    summary: options.colors.map(option => `'${option}'`).join("|")
+                }
+            },
+            contol: {
+                type: {
+                    summary: options.sizes.map(size => `'${size}'`).join("|")
+                }
+            }
+        }
+    }
 }
 
 const Template = (args) => <Card {...args} />
